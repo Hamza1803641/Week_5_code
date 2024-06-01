@@ -26,8 +26,8 @@ class usercontroller extends Controller
 
    }
 
-      public function singleuser(){
-         $users = DB::table('user')->where('email', )->get();
-         
+      public function singleuser(string $email){
+         $users = DB::table('user')->where('email', $email)->get();
+         return $users;
       }
 }
