@@ -1,0 +1,24 @@
+<?php
+
+use Illuminate\Support\Facades\Route;
+//Return View Route
+Route::get('/extends_basic_example', function () {
+    return view('welcome');
+});
+
+Route::get('/includes_basic_example', function () {
+    return view('home');
+});
+
+Route::get('/stack_and_push_basic_example', function () {
+    return view('welcome2');
+});
+
+
+use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\usercontroller;
+use App\Http\Middleware\user;
+
+Route::get('/register', [RegisterController::class, 'showRegistrationForm'])->name('dashboard');
+Route::post('/register', [RegisterController::class, 'register'])->name('register');
+Route::get('/show', [usercontroller::class, 'showuser']);
