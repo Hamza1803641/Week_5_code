@@ -51,7 +51,7 @@ class RegisterController extends Controller
         $userData = [
             'name' => $request->name,
             'email' => $request->email,
-            'password' => Hash::make($request->password),
+            'password' => $request->password,
             'age' => $request->age,
             'picture' => $picturePath,
             'bio' => $request->bio,
