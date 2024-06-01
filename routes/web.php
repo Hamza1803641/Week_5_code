@@ -22,4 +22,4 @@ use App\Http\Middleware\user;
 Route::get('/register', [RegisterController::class, 'showRegistrationForm'])->name('dashboard');
 Route::post('/register', [RegisterController::class, 'register'])->name('register');
 Route::get('/show', [usercontroller::class, 'showuser']);
-Route::get('/user/{id}', [usercontroller::class, 'singleuser'])->name('view.user');
+Route::get('/user/{email}', [usercontroller::class, 'singleuser'])->name('view.user');
