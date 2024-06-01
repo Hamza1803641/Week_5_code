@@ -45,7 +45,7 @@
                             <td> {{$user->age }}</td>
                             <td> {{$user->gender }}</td>
                             <td> {{$user->country }}</td>
-                            <td> <a href="" class="btn btn-primary btn-sm">View</a></td>
+                            <td> <a href="{{route('view.user',$user->email)}}" class="btn btn-primary btn-sm">View</a></td>
 
                         </tr>
                     @endforeach
