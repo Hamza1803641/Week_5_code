@@ -11,7 +11,7 @@ class usercontroller extends Controller
    {
       $users = DB::table('user')->get();
 
-        // return $users;
+      // return $users;
 
 
       /*  foreach ($users as $use) {
@@ -26,8 +26,10 @@ class usercontroller extends Controller
 
    }
 
-      public function singleuser(string $email){
-         $users = DB::table('user')->where('email', $email)->get();
-         return $users;
-      }
+   public function singleuser(string $email)
+   {
+      $users = DB::table('user')->where('email', $email)->get();
+      //  return $users;
+      return view('singleuser', ['data' => $users]);
+   }
 }
