@@ -9,7 +9,6 @@ class usercontroller extends Controller
 {
    public function showuser()
    {
-      $users = DB::table('user')->get();
 
       // return $users;
 
@@ -17,6 +16,7 @@ class usercontroller extends Controller
       /*  foreach ($users as $use) {
          echo $use->email."<br>";
         }*/
+        $users = DB::table('user')->get();
 
       return view('allusers', ['data' => $users]);
 
@@ -38,6 +38,12 @@ public function deleteuser(string $email)
    $users = DB::table('user')->where('email',$email)->delete();
    return redirect('/show');                                        
 }
+public function updateuser(string $email)
+{
+   $users = DB::table('user')->find($email);
+
+ //  return view('allusers', ['data' => $users]);
+
 
 
 }
