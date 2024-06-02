@@ -32,4 +32,8 @@ class usercontroller extends Controller
       //  return $users;
       return view('singleuser', ['data' => $users]);
    }
+
+
+
+   
 }
