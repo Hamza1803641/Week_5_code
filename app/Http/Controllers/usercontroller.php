@@ -40,7 +40,9 @@ public function deleteuser(string $email)
 }
 public function updateuser(string $email)
 {
-   $users = DB::table('user')->find($email);
+ //  $users = DB::table('user')->find($email);//   work only in id
+ $users = DB::table('user')->where('email', $email)->get();
+      //  return $users;
 
   return view('updateuser', ['data' => $users]);
 }
