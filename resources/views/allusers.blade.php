@@ -48,7 +48,7 @@
                             <td> {{$user->gender }}</td>
                             <td> {{$user->country }}</td>
                             <td> <a href="{{route('view.user',$user->email)}}" class="btn btn-primary btn-sm">View</a></td>
-                            <td> <a href="{{route('view.user',$user->email)}}" class="btn btn-primary btn-sm">Delete</a></td>
+                            <td> <a href="{{route('delete.user',$user->email)}}" class="btn btn-danger btn-sm">Delete</a></td>
 
                         </tr>
                     @endforeach

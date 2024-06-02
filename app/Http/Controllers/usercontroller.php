@@ -32,8 +32,12 @@ class usercontroller extends Controller
       //  return $users;
       return view('singleuser', ['data' => $users]);
    }
+ 
+public function deleteuser(string $email)
+{
+   $users = DB::table('user')->where('email',$email)->delete();
+   return redirect('/show');                                        
+}
 
 
-
-   
 }

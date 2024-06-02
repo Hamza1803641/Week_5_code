@@ -23,3 +23,4 @@ Route::get('/register', [RegisterController::class, 'showRegistrationForm'])->na
 Route::post('/register', [RegisterController::class, 'register'])->name('register');
 Route::get('/show', [usercontroller::class, 'showuser']);
 Route::get('/user/{email}', [usercontroller::class, 'singleuser'])->name('view.user');
+Route::get('/delete/{email}', [usercontroller::class, 'deleteuser'])->name('delete.user');
