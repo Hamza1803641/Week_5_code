@@ -42,8 +42,8 @@ public function updateuser(string $email)
 {
    $users = DB::table('user')->find($email);
 
- //  return view('allusers', ['data' => $users]);
-
-
+  return view('updateuser', ['data' => $users]);
+}
 
 }
+
