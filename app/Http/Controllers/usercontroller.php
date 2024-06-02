@@ -9,14 +9,10 @@ class usercontroller extends Controller
 {
    public function showuser()
    {
-
-      // return $users;
-
-
       /*  foreach ($users as $use) {
          echo $use->email."<br>";
         }*/
-        $users = DB::table('user')->get();
+      $users = DB::table('user')->get();
 
       return view('allusers', ['data' => $users]);
 
@@ -32,20 +28,21 @@ class usercontroller extends Controller
       //  return $users;
       return view('singleuser', ['data' => $users]);
    }
- 
-public function deleteuser(string $email)
-{
-   $users = DB::table('user')->where('email',$email)->delete();
-   return redirect('/show');                                        
-}
-public function updateuser(string $email)
-{
- //  $users = DB::table('user')->find($email);//   work only in id
- $users = DB::table('user')->where('email', $email)->get();
-      //  return $users;
 
-  return view('updateuser', ['data' => $users]);
-}
+   public function deleteuser(string $email)
+   {
+      $users = DB::table('user')->where('email', $email)->delete();
+      return redirect('/show');
+   }
+
+
+   public function updatepage(string $email)
+   {
+      //  $users = DB::table('user')->find($email);//   work only in id
+      $users = DB::table('user')->where('email', $email)->get();
+      return view('updateuser', ['data' => $users]);
+
+   }
 
 }
 
