@@ -14,7 +14,7 @@
         <div class="row">
             <div class="col-4">
                 <h1>Update User</h1>
-                <form method="POST" action="{{ route('update.user', $data->first()->email) }}">
+                <form method="POST" action="{{ route('update.page', $data->first()->email) }}">
                     @csrf
 
                     <div class="form-group">
