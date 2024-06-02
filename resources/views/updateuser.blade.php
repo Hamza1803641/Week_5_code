@@ -14,28 +14,33 @@
         <div class="row">
             <div class="col-4">
                 <h1>Update User</h1>
-                <form method="POST" action="{{route('update.user', $data->email)}}" >
+                <form method="POST" action="{{ route('update.user', $data->first()->email) }}">
                     @csrf
 
                     <div class="form-group">
                         <b><label for="name">Name</label></b>
-                        <input id="name" type="text" name="name" class="form-control" value="{{ $data->name }}"
+                        <input id="name" type="text" name="name" class="form-control" value="{{ $data->first()->name }}"
                             required>
                     </div>
                     <div class="form-group">
-                        <b> <label for="email">Email</label></b>
-                        <input id="email" type="email" name="email" class="form-control" value="{{ $data->email }}"
-                            required>
+                        <b><label for="email">Email</label></b>
+                        <input id="email" type="email" name="email" class="form-control"
+                            value="{{ $data->first()->email }}" required>
                     </div>
                     <div class="form-group">
                         <b><label for="password">Password</label></b>
-                        <input id="password" type="password" name="password" class="form-control" {{ $data->password }}
-                            required>
+                        <input id="password" type="password" name="password" class="form-control"
+                            value="{{ $data->first()->password }}" required>
                     </div>
                     <div class="form-group">
                         <b><label for="age">Age</label></b>
-                        <input id="age" type="text" name="age" class="form-control" value="{{ $data->age }}" required>
+                        <input id="age" type="text" name="age" class="form-control" value="{{ $data->first()->age }}"
+                            required>
                     </div>
+                    <br>
+                    <button type="submit" class="btn btn-primary">Update</button>
+
+                </form>
 
                 </form>
 
