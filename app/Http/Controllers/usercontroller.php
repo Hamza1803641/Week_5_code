@@ -53,7 +53,10 @@ class usercontroller extends Controller
          'age' => $request->age,
 
       ]);
-      return view('updateuser', ['data' => $users]);
+      //dd($users);
+      $users = DB::table('user')->where('email', $request->email)->get();
+
+     return view('updateuser', ['data' => $users]);
 
    }
 }
