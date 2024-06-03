@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+
 //Return View Route
 Route::get('/extends_basic_example', function () {
     return view('welcome');
@@ -25,3 +26,4 @@ Route::get('/show', [usercontroller::class, 'showuser']);
 Route::get('/user/{email}', [usercontroller::class, 'singleuser'])->name('view.user');
 Route::get('/delete/{email}', [usercontroller::class, 'deleteuser'])->name('delete.user');
 Route::post('/updatepage/{email}', [usercontroller::class, 'updatepage'])->name('update.user');
+Route::get('/updatepage/{email}', [usercontroller::class, 'updatepage'])->name('update.user.post');
