@@ -54,6 +54,7 @@ class usercontroller extends Controller
          'email' => $request->email,
          'password' => $request->password,
          'age' => $request->age,
+         'country'=>$request->country,
 
       ]);
       $users = DB::table('user')->where('email', $request->email)->get();
