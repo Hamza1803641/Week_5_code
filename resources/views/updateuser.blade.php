@@ -37,6 +37,11 @@
                         <input id="age" type="text" name="age" class="form-control" value="{{ $data->first()->age }}"
                             required>
                     </div>
+                    <div class="form-group">
+                        <b><label for="age">Country</label></b>
+                        <input id="country" type="text" name="country" class="form-control" value="{{ $data->first()->country }}"
+                            required>
+                    </div>
                     <br>
                     <button type="submit" class="btn btn-primary">Update</button>
 
