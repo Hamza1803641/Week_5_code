@@ -36,14 +36,14 @@ class usercontroller extends Controller
    }
 
 
-    public function updateuser(string $email)
-    {
-      $users = DB::table('user')->where('email',$email)->get();
+   public function updateuser(string $email)
+   {
+      $users = DB::table('user')->where('email', $email)->get();
 
       //  $users = DB::table('user')->find($email);//   work only in id
-       return view('updateuser', ['data' => $users]);
+      return view('updateuser', ['data' => $users]);
 
-    }
+   }
    public function updatepage(Request $request, $email)
    {
 
@@ -56,9 +56,9 @@ class usercontroller extends Controller
          'age' => $request->age,
 
       ]);
-    $users = DB::table('user')->where('email', $request->email)->get();
-      
-    return view('updateuser', ['data' => $users]);
+      $users = DB::table('user')->where('email', $request->email)->get();
+
+      return redirect('/show')->with('success', 'User updated successfully');
 
    }
 }
