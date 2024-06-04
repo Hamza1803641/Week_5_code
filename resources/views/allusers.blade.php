@@ -39,7 +39,7 @@
                             <h2> Update</h2>
                         </td>
                         <td>
-                            <h2> delete</h2>
+                            <h2>Delete</h2>
                         </td>
                     </tr>
                     @foreach ($data as $id => $user)
