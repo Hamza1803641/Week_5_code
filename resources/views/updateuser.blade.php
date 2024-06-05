@@ -38,7 +38,12 @@
                             required>
                     </div>
                     <div class="form-group">
-                        <b><label for="age">Country</label></b>
+                        <b><label for="city">City</label></b>
+                        <input id="city" type="text" name="city" class="form-control" value="{{ $data->first()->city }}"
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <b><label for="country">Country</label></b>
                         <input id="country" type="text" name="country" class="form-control" value="{{ $data->first()->country }}"
                             required>
                     </div>
