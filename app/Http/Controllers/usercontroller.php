@@ -51,6 +51,7 @@ class usercontroller extends Controller
          'email' => $request->email,
          'password' => $request->password,
          'age' => $request->age,
+         'city' => $request->city,
          'country'=>$request->country,
 
       ]);
