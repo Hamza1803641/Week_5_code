@@ -13,16 +13,11 @@ class usercontroller extends Controller
 
       return view('allusers', ['data' => $users]);
 
-      //dd( $users);
-
-
-
-   }
+      }
 
    public function singleuser(string $email)
    {
       $users = DB::table('user')->where('email', $email)->get();
-      //  return $users;
       return view('singleuser', ['data' => $users]);
    }
 
