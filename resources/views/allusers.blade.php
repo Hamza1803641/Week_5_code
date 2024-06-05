@@ -53,7 +53,9 @@
                             <td> {{$user->name }}</td>
                             <td> {{$user->age }}</td>
                             <td> {{$user->gender }}</td>
+                            <td> {{$user->city }}</td>
                             <td> {{$user->country }}</td>
+
                             <td> <a href="{{route('view.user',$user->email)}}" class="btn btn-primary btn-sm">View</a></td>
                             <td> <a href="{{route('update.user',$user->email)}}" class="btn btn-warning btn-sm">Update</a></td>
                             <td> <a href="{{route('delete.user',$user->email)}}" class="btn btn-danger btn-sm">Delete</a></td>
