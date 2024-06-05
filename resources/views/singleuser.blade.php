@@ -14,7 +14,7 @@
         <div class="row">
             <div class="col-6">
 
-            <h1>User Details</h1>
+                <h1>User Details</h1>
 
                 <table class="table table-bordered table-striped">
                     <tr>
@@ -33,17 +33,17 @@
                         <td>
                             <h2> Country</h2>
                         </td>
-                      
+
                     </tr>
                     @foreach ($data as $mail => $users)
 
-       <td>   <h3>{{$users->name}}</h3></td>
-      <td>   <h3> {{$users->email}}</h3></td>
-       <td> <h3>{{$users->password}}</h3></td>
-       <td> <h3> {{$users->city}}</h3></td>
-      <td>  <h3>{{$users->country}}</h3></td>
+                        <td> {{$users->name}}</td>
+                        <td> {{$users->email}}</td>
+                        <td> {{$users->password}}</td>
+                        <td> {{$users->city}}</td>
+                        <td> {{$users->country}}</td>
 
-@endforeach
+                    @endforeach
                 </table>
 
 
@@ -53,5 +53,3 @@
 </body>
 
 </html>
-
-
