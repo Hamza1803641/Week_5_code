@@ -29,7 +29,7 @@ class usercontroller extends Controller
    public function deleteuser(string $email)
    {
       $users = DB::table('user')->where('email', $email)->delete();
-      return redirect('/show');
+      return redirect('/show')->with('success', 'User Delete successfully');
    }
 
 
