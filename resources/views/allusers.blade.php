@@ -14,7 +14,11 @@
         <div class="row">
             <div class="col-6">
                 <h1>All users data list</h1>
-
+                @if (session('success'))
+            <div class="alert alert-success">
+                {{ session('success') }}
+            </div>
+        @endif
                 <table class="table table-bordered table-striped">
                     <tr>
                         <td>
