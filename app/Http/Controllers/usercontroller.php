@@ -9,10 +9,7 @@ class usercontroller extends Controller
 {
    public function showuser()
    {
-      /*  foreach ($users as $use) {
-         echo $use->email."<br>";
-        }*/
-      $users = DB::table('user')->get();
+           $users = DB::table('user')->get();
 
       return view('allusers', ['data' => $users]);
 
