@@ -7,9 +7,6 @@ Route::get('/extends_basic_example', function () {
     return view('welcome');
 });
 
-Route::get('/includes_basic_example', function () {
-    return view('home');
-});
 
 Route::get('/stack_and_push_basic_example', function () {
     return view('welcome2');
