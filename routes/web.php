@@ -2,15 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 
-//Return View Route
-Route::get('/extends_basic_example', function () {
-    return view('welcome');
-});
-
-
-Route::get('/stack_and_push_basic_example', function () {
-    return view('welcome2');
-});
 
 
 use App\Http\Controllers\RegisterController;
